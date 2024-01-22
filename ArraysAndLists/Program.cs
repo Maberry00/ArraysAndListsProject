@@ -22,7 +22,7 @@ namespace ArraysAndLists
             /* Create another list of type int
              * Name the list "odds"
              */
-            var odd = new List<int>();
+            List<int> odd = new List<int>();
 
             /* Using either a foreach or for loop,
             * iterate through the array you populated with 10 numbers.
@@ -37,12 +37,10 @@ namespace ArraysAndLists
                 if(n % 2 == 0) 
                 {
                     evens.Add(n);
-                    Console.WriteLine($"{n}");
                 }
                 else 
                 {
                     odd.Add(n);
-                    Console.WriteLine($"{n}");
                 }
             }
 
@@ -50,21 +48,22 @@ namespace ArraysAndLists
              * display the numbers in your "evens" list
              */
 
+            Console.WriteLine("All even numbers: ");
+
+            foreach (var item in evens)
+            {
+                Console.WriteLine(item);
+            }
 
             /* Using a for loop,
              * display the numbers in your "odds" list
              */
 
-            Console.WriteLine();
+            Console.WriteLine("All odd numbers: ");
 
-            foreach (var item in evens)
+            for (var i = 0; i < odd.Count; i++)
             {
-                Console.WriteLine($"{item} is pretty even");
-            }
-
-            foreach (var oddnum in odd)
-            {
-                Console.WriteLine($"{oddnum} is crazy odd");
+                Console.WriteLine(odd[i]);
             }
 
         }
